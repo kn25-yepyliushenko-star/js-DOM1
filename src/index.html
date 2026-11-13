@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <!-- Верхня панель / Дисплей як у Python калькуляторі -->
+        <div class="display-container">
+            <div id="exprDisplay" class="expr-label"></div>
+            <div id="mainDisplay" class="display-label">0</div>
+        </div>
+
+        <!-- Повідомлення про помилки -->
+        <div id="errorContainer" class="error-badge" style="display: none;">
+            <span class="error-icon">&#9888;</span>
+            <span id="errorMessage" class="error-text"></span>
+        </div>
+
+        <!-- Два поля введення згідно з технічним завданням -->
+        <div class="inputs-container">
+            <div class="input-field">
+                <label for="firstNumber">Перше число</label>
+                <input
+                    type="text"
+                    id="firstNumber"
+                    class="calc-input"
+                    placeholder="0"
+                    autocomplete="off"
+                >
+            </div>
+            <div class="input-field">
+                <label for="secondNumber">Друге число</label>
+                <input
+                    type="text"
+                    id="secondNumber"
+                    class="calc-input"
+                    placeholder="0"
+                    autocomplete="off"
+                >
+            </div>
+        </div>
+
+        <!-- Кнопки математичних операцій у стилі Python-версії -->
+        <div class="buttons-grid">
+            <button type="button" id="btnClear" class="btn btn-fn" title="Очистити">C</button>
+            <button type="button" id="btnDivide" class="btn btn-op" title="Ділення">&divide;</button>
+            <button type="button" id="btnMultiply" class="btn btn-op" title="Множення">&times;</button>
+            <button type="button" id="btnSubtract" class="btn btn-op" title="Віднімання">&minus;</button>
+            <button type="button" id="btnAdd" class="btn btn-op" title="Додавання">+</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
